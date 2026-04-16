@@ -15,11 +15,14 @@
         "laravel/tinker": "^3.0",
         "spatie/fork": "^1.2",
         "statamic/cms": "^6.0",
-        "statamic/ssg": "^4.1"
+        "statamic/ssg": "^4.1",
+        "studio1902/statamic-peak-seo": "^11.0",
+        "studio1902/statamic-peak-tools": "^9.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "fruitcake/laravel-debugbar": "^4.0",
+        "laravel-lang/common": "^6.8",
         "laravel/pail": "^1.2.5",
         "laravel/pint": "^1.27",
         "laravel/sail": "^1.41",

@@ -1,0 +1,50 @@
+<section class="hero"
+    {{ if image }} 
+        style="background-image: url( '{{ image:url }}' );
+        background-size: cover;
+        background-position: bottom;"
+    {{ /if }}
+>
+    <div class="overlay"></div>
+    <div class="hero__content text-brand-white ">
+        {{ if title || subtitle }}
+        <div class="hero__text">
+            
+            {{ if title }}
+            <h1 class="heading-1">
+                {{ title }}
+            </h1>
+            {{ /if }}
+
+            {{ if subtitle }}
+            <h2 class="heading-hero">
+                {{ subtitle }}
+            </h2>
+            {{ /if }}
+
+        </div>
+        {{ /if }}
+
+        {{ if buttons }}
+        <div class="hero__buttons">
+
+            {{ buttons }}
+            <a href="{{ url }}">
+                <button class="btn btn-flex">
+                    <span class="leading-8 mb-5 heading-3">
+                        {{ button_text }}
+                    </span>
+                    {{ if secondary_text }}
+                    <span class="uppercase p-small font-normal">
+                        {{ secondary_text }}
+                    </span>
+                    {{ /if }}
+                </button>
+            </a>
+            {{ /buttons }}
+
+        </div>
+        {{ /if }}
+
+    </div>
+</section>

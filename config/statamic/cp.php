@@ -53,16 +53,44 @@ return [
     */
 
     'widgets' => [
-        //
+        [
+            'type' => 'images_missing_alt',
+            'container' => 'images',
+            'limit' => 5,
+            'width' => 50,
+        ],
+        [
+            'type' => 'collection',
+            'collection' => 'pages',
+            'width' => 50,
+        ],
+        [
+            'type' => 'form',
+            'form' => 'contact',
+            'fields' => ['name', 'email'],
+            'limit' => '5',
+            'width' => 100,
+        ],
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Date Format
+    |--------------------------------------------------------------------------
+    |
+    | When a date is encountered throughout the Control Panel, it will be
+    | rendered in the following format. Any PHP date variables are permitted.
+    |
+    */
+
+    'date_format' => 'Y-m-d',
 
     /*
     |--------------------------------------------------------------------------
     | Pagination
     |--------------------------------------------------------------------------
     |
-    | Here you may define the default pagination size as well as the options
-    | the user can select on any paginated listing in the Control Panel.
+    | The numbers of items to show on each paginated page.
     |
     */
 
@@ -86,7 +114,8 @@ return [
     | Support Link
     |--------------------------------------------------------------------------
     |
-    | Set the location of the support link in the header.
+    | Set the location of the support link in the "Useful Links" header
+    | dropdown. Use 'false' to remove it entirely.
     |
     */
 
@@ -105,11 +134,12 @@ return [
 
     'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Statamic'),
 
-    'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL', null),
+    'custom_logo_url' => [
+        'nav' => env('STATAMIC_CUSTOM_LOGO_NAV_URL', null),
+        'outside' => env('STATAMIC_CUSTOM_LOGO_OUTSIDE_URL', null),
+    ],
 
-    'custom_dark_logo_url' => env('STATAMIC_CUSTOM_DARK_LOGO_URL', null),
-
-    'custom_logo_text' => env('STATAMIC_CUSTOM_LOGO_TEXT', null),
+    'custom_logo_text' => env('APP_NAME', 'Statamic'),
 
     'custom_favicon_url' => env('STATAMIC_CUSTOM_FAVICON_URL', null),
 
@@ -127,5 +157,4 @@ return [
     'thumbnail_presets' => [
         // 'medium' => 800,
     ],
-
 ];

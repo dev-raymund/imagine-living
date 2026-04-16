@@ -1,0 +1,9 @@
+name: 'Raymund Hermoso'
+super: true
+id: c46a3645-3a97-4e7f-87ae-a7a14a0f052d
+password_hash: $2y$12$YvDuNTX2vhRyjvnSdjY57eQgQDLzdASeoptkKNdFp8CyUlMmFEI/S
+preferences:
+  color_mode: light
+  collections:
+    pages:
+      view: tree

@@ -37,10 +37,7 @@ return [
             'driver' => 'file',
             'path' => public_path('static'),
             'lock_hold_length' => 0,
-            'permissions' => [
-                'directory' => 0755,
-                'file' => 0644,
-            ],
+            'warm_concurrency' => 10,
         ],
 
     ],
@@ -61,9 +58,10 @@ return [
         'class' => null,
 
         'urls' => [
-            //
+            '/site.webmanifest',
+            '/sitemap.xml',
+            '/sitemaps.xml',
         ],
-
     ],
 
     /*
@@ -83,9 +81,7 @@ return [
 
         'class' => null,
 
-        'rules' => [
-            //
-        ],
+        'rules' => 'all',
 
     ],
 
@@ -127,6 +123,8 @@ return [
 
     'nocache_db_connection' => env('STATAMIC_NOCACHE_DB_CONNECTION'),
 
+    'nocache_js_position' => 'body',
+
     /*
     |--------------------------------------------------------------------------
     | Replacers
@@ -158,36 +156,5 @@ return [
     'warm_queue_connection' => env('STATAMIC_STATIC_WARM_QUEUE_CONNECTION'),
 
     'warm_insecure' => env('STATAMIC_STATIC_WARM_INSECURE', false),
-
-    /*
-    |--------------------------------------------------------------------------
-    | Background Re-cache
-    |--------------------------------------------------------------------------
-    |
-    | When this is enabled, Statamic will re-cache URLs in the background,
-    | overwriting the existing cache, without removing it first.
-    |
-    */
-
-    'background_recache' => env('STATAMIC_BACKGROUND_RECACHE', false),
-
-    'recache_token' => env('STATAMIC_RECACHE_TOKEN'),
-
-    'recache_token_parameter' => '__recache',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Shared Error Pages
-    |--------------------------------------------------------------------------
-    |
-    | You may choose to share the same statically generated error page across
-    | all errors. For example, the first time a 404 is encountered it will
-    | be generated and cached, and then served for all subsequent 404s.
-    |
-    | This is only supported for half measure.
-    |
-    */
-
-    'share_errors' => false,
 
 ];

@@ -1,0 +1,45 @@
+fields:
+  - handle: image
+    field:
+      type: assets
+      container: assets
+      max_files: 1
+      label: Image
+      display: Image
+
+  - handle: title
+    field:
+      type: text
+      label: Title
+      display: Title
+
+  - handle: subtitle
+    field:
+      type: text
+      label: Subtitle
+      display: Subtitle
+
+  - handle: buttons
+    field:
+      type: replicator
+      label: Buttons
+      display: Buttons
+      sets:
+        button:
+          display: Button
+          fields:
+            - handle: button_text
+              field:
+                type: text
+                label: Button Text
+                display: Button Text
+            - handle: secondary_text
+              field:
+                type: text
+                label: Secondary Text
+                display: Secondary Text
+            - handle: url
+              field:
+                type: text
+                label: URL
+                display: URL
