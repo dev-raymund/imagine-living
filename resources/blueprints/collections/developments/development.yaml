@@ -1,0 +1,128 @@
+title: Development
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: status
+            field:
+              options:
+                coming_soon: 'Coming soon'
+                available: Available
+                sold_out: 'Sold out'
+              type: select
+              localizable: true
+              default: available
+              listable: false
+              display: Status
+              width: 33
+          -
+            handle: price_range
+            field:
+              input_type: text
+              type: text
+              localizable: true
+              listable: false
+              display: 'Price Range'
+              width: 66
+          -
+            handle: name
+            field:
+              input_type: text
+              type: text
+              localizable: true
+              listable: true
+              display: Name
+              validate:
+                - required
+              width: 33
+          -
+            handle: area
+            field:
+              input_type: text
+              type: text
+              localizable: true
+              listable: true
+              display: Area
+              width: 33
+          -
+            handle: caption
+            field:
+              input_type: text
+              type: text
+              localizable: true
+              listable: true
+              display: Caption
+              width: 33
+          -
+            handle: images
+            field:
+              container: assets
+              type: assets
+              localizable: true
+              mode: list
+              display: Images
+          -
+            handle: description
+            field:
+              type: textarea
+              localizable: true
+              display: Description
+              listable: false
+          -
+            handle: link
+            field:
+              input_type: url
+              type: text
+              localizable: true
+              listable: false
+              display: Link
+              instructions: 'Link for the development card.'
+              width: 66
+          -
+            handle: target_blank
+            field:
+              type: toggle
+              localizable: true
+              listable: false
+              display: 'Target blank'
+              instructions: 'Open the link in a new tab.'
+              width: 33
+          -
+            import: buttons
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_basic'
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_advanced'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_open_graph'
+      -
+        display: Sitemap
+        instructions: 'Sitemap configuration.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_sitemap'
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects.'
+        fields:
+          -
+            import: 'statamic-peak-seo::seo_jsonld'

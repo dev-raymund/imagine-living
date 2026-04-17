@@ -1,0 +1,39 @@
+{{#
+    @name Text editor
+    @desc The text editor page builder block.
+    @set page.page_builder.text_editor
+#}}
+
+<!-- /page_builder/_text_editor.antlers.html -->
+<section class="text-editor section--wide bg-brand-white max-w-screen-max mx-auto">
+    <div class="max-w-screen-xxl mx-auto">
+        {{ if block:title }}
+            <h2 class="heading-4 uppercase text-brand-primary mb-4 md:mb-8">
+                {{ block:title }}
+            </h2>
+        {{ /if }}
+        <div class="text-editor__container">
+            <div class="text-editor__content w-full">
+                {{ if block:text_editor }}
+                    <div class="p text-brand-primary mb-8">
+                        {{ block:text_editor }}
+                    </div>
+                {{ /if }}
+
+                {{ if block:button_text && block:button_url }}
+                    <a class="inline-flex w-full" href="{{ if block:button_url:url }}{{ block:button_url:url }}{{ else }}{{ block:button_url }}{{ /if }}">
+                        <button class="btn">
+                            <span class="heading-5">
+                                {{ block:button_text }}
+                            </span>
+                            {{ if block:secondary_text }}
+                                <span class="p-small uppercase">{{ block:secondary_text }}</span>
+                            {{ /if }}
+                        </button>
+                    </a>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End: /page_builder/_text_editor.antlers.html -->

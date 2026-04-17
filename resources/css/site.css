@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css2?family=YourFont:wght@400;700&display=swap";
+
 @import "tailwindcss";
 @import "./buttons.css";
 @import "./peak.css";
@@ -62,7 +64,7 @@ a {
     -webkit-text-decoration: inherit;
     text-decoration: inherit;
 }
-@import "https://fonts.googleapis.com/css2?family=YourFont:wght@400;700&display=swap";
+
 .anchor {
   --tw-text-opacity:1;
   max-width:max-content;
@@ -3470,4 +3472,4 @@ footer {
     margin-right:6rem
   }
 }
-/*# sourceMappingURL=site.generated.css.map */
+

@@ -1,0 +1,48 @@
+{{#
+    @name Featured Grid
+    @desc Render selected developments as post-style cards.
+    @set page.page_builder.featured_grid
+#}}
+
+<!-- /page_builder/_featured_grid.antlers.html -->
+{{ if block:title }}
+    <section class="section section--small bg-brand-white max-w-screen-max mx-auto">
+        <div class="max-w-screen-xxl mx-auto">
+            <h2 class="heading-4 uppercase text-brand-primary">{{ block:title }}</h2>
+        </div>
+    </section>
+{{ /if }}
+
+{{ if block:developments }}
+    <div class="featured-grid">
+        {{ block:developments }}
+            <div
+                class="featured-grid-item"
+                {{ if images }}style="background-image: url('{{ images:0:url }}'); background-size: cover; background-position: center;"{{ /if }}
+            >
+                <a
+                    href="{{ if link }}{{ link }}{{ else }}{{ url }}{{ /if }}"
+                    {{ if target_blank }}target="_blank" rel="noopener noreferrer"{{ /if }}
+                >
+                    <div class="overlay-hover"></div>
+                    <div class="featured-grid-content relative z-10 p-6 md:px-10">
+                        <h5 class="heading-5 font-bold">
+                            {{ name ?? title }}
+                        </h5>
+                        {{ if area }}
+                            <p class="p-small my-1">
+                                {{ area }}
+                            </p>
+                        {{ /if }}
+                        {{ if price_range }}
+                            <h6 class="heading-6 font-bold">
+                                {{ price_range }}
+                            </h6>
+                        {{ /if }}
+                    </div>
+                </a>
+            </div>
+        {{ /block:developments }}
+    </div>
+{{ /if }}
+<!-- End: /page_builder/_featured_grid.antlers.html -->

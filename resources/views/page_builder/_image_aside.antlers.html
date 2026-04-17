@@ -1,0 +1,57 @@
+{{#
+    @name Image Aside
+    @desc Image and text block with configurable variant.
+    @set page.page_builder.image_aside
+#}}
+
+<!-- /page_builder/_image_aside.antlers.html -->
+<section
+    class="
+        section
+        {{ block:variant == 'wide' ? 'wide-image-aside' : 'default-image-aside' }}
+        {{ block:background == 'gray' ? 'bg-brand-gray' : 'bg-brand-white' }}
+    "
+>
+    <div
+        class="
+            {{ block:variant == 'wide' ? 'wide-image-aside_container' : 'default-image-aside__container' }}
+            {{ block:image_side == 'left' ? 'image--left' : 'image--right' }}
+        "
+    >
+        <div class="{{ block:variant == 'wide' ? 'wide-image-aside_text' : 'default-image-aside__text' }}">
+            <div class="{{ block:variant == 'wide' ? 'wide-image-aside_content' : '' }}">
+                {{ if block:title }}
+                    <h2 class="heading-4 uppercase">
+                        {{ block:title }}
+                    </h2>
+                {{ /if }}
+
+                {{ if block:bard }}
+                    <div class="p text-brand-primary mb-8">
+                        {{ block:bard }}
+                    </div>
+                {{ /if }}
+
+                {{ if block:text && block:url }}
+                    <a
+                        class="p anchor anchor--primary font-bold"
+                        href="{{ if block:url:url }}{{ block:url:url }}{{ else }}{{ block:url }}{{ /if }}"
+                    >
+                        {{ block:text }}
+                    </a>
+                {{ /if }}
+            </div>
+        </div>
+
+        {{ if block:image }}
+            <div class="{{ block:variant == 'wide' ? 'wide-image-aside_image' : 'default-image-aside__image' }}">
+                <img
+                    src="{{ block:image:url }}"
+                    loading="lazy"
+                    alt="{{ if block:image:alt }}{{ block:image:alt }}{{ elseif block:title }}{{ block:title }}{{ else }}Image aside image{{ /if }}"
+                >
+            </div>
+        {{ /if }}
+    </div>
+</section>
+<!-- End: /page_builder/_image_aside.antlers.html -->

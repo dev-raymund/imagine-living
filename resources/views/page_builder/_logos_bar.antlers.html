@@ -1,0 +1,33 @@
+{{#
+    @name Logos Bar
+    @desc Render regulation agency logos from company information globals.
+    @set page.page_builder.logos_bar
+#}}
+
+<!-- /page_builder/_logos_bar.antlers.html -->
+<section class="logos-bar section section--small bg-brand-white max-w-screen-max mx-auto">
+    <div class="max-w-screen-xxl mx-auto stack-6">
+        {{ if block:caption }}
+            <h2 class="heading-4 uppercase text-brand-primary text-center md:text-left mb-8">
+                {{ block:caption }}
+            </h2>
+        {{ /if }}
+
+        {{ if company_information:regulation_agencies }}
+            <div class="swiper js-logos-swiper">
+                <div class="swiper-wrapper">
+                    {{ company_information:regulation_agencies }}
+                        <div class="swiper-slide">
+                            <img
+                                src="{{ url }}"
+                                alt="{{ alt ?? 'Regulation agency logo' }}"
+                                loading="lazy"
+                            >
+                        </div>
+                    {{ /company_information:regulation_agencies }}
+                </div>
+            </div>
+        {{ /if }}
+    </div>
+</section>
+<!-- End: /page_builder/_logos_bar.antlers.html -->

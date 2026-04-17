@@ -1,0 +1,11 @@
+title: 'Logos Bar'
+fields:
+  -
+    handle: caption
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: Caption
+      instructions: 'Logos editable in Globals -> Company Information -> Regulation Agencies'

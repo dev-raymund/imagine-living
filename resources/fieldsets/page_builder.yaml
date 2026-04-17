@@ -19,6 +19,34 @@ fields:
           fields:
             -
               import: hero
+        text_editor:
+          display: 'Text editor'
+          instructions: 'Render a title, rich text, and optional button.'
+          icon: text-formatting-all-caps
+          fields:
+            -
+              import: text_editor
+        image_aside:
+          display: 'Image Aside'
+          instructions: 'Text block with image aligned left or right.'
+          icon: media-image-camera
+          fields:
+            -
+              import: image_aside
+        featured_grid:
+          display: 'Featured Grid'
+          instructions: 'Show selected developments as cards.'
+          icon: dashboard-layout
+          fields:
+            -
+              import: featured_grid
+        logos_bar:
+          display: 'Logos Bar'
+          instructions: 'Display regulation agency logos from company information globals.'
+          icon: dashboard-layout
+          fields:
+            -
+              import: logos_bar
         image_and_text:
           display: 'Image and text'
           instructions: 'Image and text based blocks.'

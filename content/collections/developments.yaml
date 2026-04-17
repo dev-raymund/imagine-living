@@ -1,0 +1,14 @@
+title: Developments
+template: default
+layout: layout
+revisions: false
+route: '/developments/{slug}'
+sort_dir: asc
+date: false
+default_blueprint: development
+title_format: '{name}'
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: false

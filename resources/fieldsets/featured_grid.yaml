@@ -1,0 +1,22 @@
+title: 'Featured Grid'
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: Title
+  -
+    handle: developments
+    field:
+      max_items: 12
+      mode: default
+      collections:
+        - developments
+      type: entries
+      localizable: true
+      listable: false
+      display: Developments
+      instructions: 'Select development entries to show as cards.'

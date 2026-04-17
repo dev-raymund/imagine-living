@@ -1,0 +1,75 @@
+title: 'Text editor'
+fields:
+  -
+    handle: title
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: Title
+  -
+    handle: background
+    field:
+      options:
+        white: White
+        gray: 'Gray'
+      type: select
+      localizable: true
+      default: white
+      listable: false
+      display: Background
+  -
+    handle: text_editor
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - paragraph
+        - bold
+        - italic
+        - underline
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+      link_noopener: true
+      container: files
+      fullscreen: true
+      allow_source: true
+      type: bard
+      replicator_preview: false
+      localizable: true
+      display: Bard
+      always_save: false
+      remove_empty_nodes: true
+      smart_typography: true
+  -
+    handle: button_text
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: 'Button text'
+      width: 50
+  -
+    handle: secondary_text
+    field:
+      input_type: text
+      type: text
+      localizable: true
+      listable: false
+      display: 'Secondary text'
+      width: 50
+  -
+    handle: button_url
+    field:
+      type: link
+      localizable: true
+      listable: false
+      display: 'Button URL'
