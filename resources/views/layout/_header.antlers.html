@@ -4,11 +4,89 @@
 #}}
 
 <!-- /layout/_header.antlers.html -->
-<header class="fluid-grid py-4">
-    <div class="span-content flex justify-between items-center">
-        {{# Make partials you want to use for the header or use and edit premade examples like the following ones. #}}
-        {{ partial:components/logo width="120" }}
-        {{ partial:navigation/main }}
+<header class="nav-wrapper relative bg-white">
+    <div class="nav-container max-w-screen-max mx-auto px-4 xl:px-8">
+        <div class="flex justify-between items-center h-full">
+            <div class="flex justify-center">
+                {{ partial:components/logo }}
+            </div>
+
+            {{ partial:navigation/main }}
+
+            <nav class="nav hidden xl:flex xl:items-center">
+                <a href="https://imagineliving.co.uk/" class="nav-link anchor ">
+                    Home
+                </a>
+                <a href="/about-us" class="nav-link anchor ">
+                    About Us`
+                </a>
+                <a href="/what-we-do" class="nav-link anchor ">
+                    What We Do
+                </a>
+                <a href="/developments" class="nav-link anchor ">
+                    Find a home
+                </a>
+                <a href="/contact-us" class="nav-link anchor ">
+                    Contact us
+                </a>
+                
+                <a href="tel:020 3376 6455" target="_blank" rel="noreferrer noopener" class="nav-link anchor anchor--secondary lowercase">
+                    020 3376 6455
+                </a>
+            </nav>
+            <div class="-mr-2 -my-2 xl:hidden">
+                <button type="button" class="js-hamburger-menu rounded-md p-2 inline-flex items-center justify-center text-brand-primary transition-all hover:text-brand-secondary">
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
+    <div class="mobile-nav js-mobile-nav mobile-nav-closed">
+        <div class="rounded-xl shadow-xl bg-brand-white">
+            <div class="pt-8 pb-10 px-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <a href="/">
+                            <img width="100" class="h-20 w-auto" src="/assets/logos/logo-d2-(3).png" loading="lazy" alt="logo-d2-(3).png">
+                        </a>
+                    </div>
+                    <div class="-mr-2">
+                        <button type="button" class="js-hamburger-menu rounded-md p-2 inline-flex items-center justify-center text-brand-primary transition-all hover:text-brand-secondary">
+                            <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <nav class="grid gap-y-8">
+                            <a href="https://imagineliving.co.uk/" class="nav-link anchor ">
+                                Home
+                            </a>
+                            <a href="/about-us" class="nav-link anchor ">
+                                About Us
+                            </a>
+                            <a href="/what-we-do" class="nav-link anchor ">
+                                What We Do
+                            </a>
+                            <a href="/developments" class="nav-link anchor ">
+                                Find a home
+                            </a>
+                            <a href="/contact-us" class="nav-link anchor ">
+                                Contact us
+                            </a>
+                        
+                        <a href="tel:020 3376 6455" target="_blank" rel="noreferrer noopener" class="nav-link anchor anchor--secondary lowercase">
+                            020 3376 6455
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </header>
 <!-- End: /layout/_header.antlers.html -->

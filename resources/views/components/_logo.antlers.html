@@ -8,6 +8,17 @@
     aria-label="{{ trans:strings.home }}"
     href="{{ site:url }}"
 >
-    <img src="/visuals/statamic-peak-logo.svg" class="select-none {{ class }}" width="{{ width }}" alt="" aria-hidden="true"/>
+    {{ if company_information:logo }}
+        {{ company_information:logo }}
+            <img 
+                width="200" 
+                src="{{ url }}" 
+                loading="lazy" 
+                alt="{{ alt ?? company_information:name }}" 
+            />
+        {{ /company_information:logo }}
+    {{ else }}
+        <span>{{ company_information:name }}</span>
+    {{ /if }}
 </a>
 <!-- End: /components/_logo.antlers.html -->

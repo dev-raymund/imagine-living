@@ -1,0 +1,70 @@
+fields:
+  - handle: logo
+    field:
+      type: assets
+      container: assets
+      max_files: 1
+      label: Logo
+      display: Logo
+
+  - handle: name
+    field:
+      type: text
+      label: Name
+      display: Name
+
+  - handle: email
+    field:
+      type: text
+      label: Email
+      display: Email
+
+  - handle: phone_number
+    field:
+      type: text
+      label: Phone Number
+      display: Phone Number
+
+  - handle: address_line_1
+    field:
+      type: text
+      label: Address Line 1
+      display: Address Line 1
+
+  - handle: address_line_2
+    field:
+      type: text
+      label: Address Line 2
+      display: Address Line 2
+
+  - handle: city
+    field:
+      type: text
+      label: City
+      display: City
+
+  - handle: county
+    field:
+      type: text
+      label: County
+      display: County
+
+  - handle: post_code
+    field:
+      type: text
+      label: Post Code
+      display: Post Code
+
+  - handle: regulation_agencies
+    field:
+      type: assets
+      container: assets
+      max_files: 10
+      label: Regulation Agencies
+      display: Regulation Agencies
+
+  - handle: google_maps_link
+    field:
+      type: textarea
+      label: Google Maps Link
+      display: Google Maps Link
