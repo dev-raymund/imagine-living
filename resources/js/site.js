@@ -22,6 +22,7 @@ const initLogosSwipers = () => {
             observer: true,
             observeParents: true,
             loop: true,
+            centeredSlides: true,
             speed: 800,
             autoplay: {
                 delay: 2200,
